@@ -75,7 +75,11 @@ function isPrime(num) {
   if (num < 2) {
     return false;
   } else {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> ce60ba156212799cd67d153c71f83d32db4db982
   }
 }
 
