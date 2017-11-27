@@ -72,6 +72,11 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
+  if (num < 2) {
+    return false;
+  } else {
+
+  }
 }
 
 function returnFirst(arr) {
