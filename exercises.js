@@ -3,6 +3,11 @@
 function getBiggest(x, y) {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
+  if (x => y) {
+    return x;
+  } else {
+    return y;
+  }
 }
 
 function greeting(language) {
@@ -11,6 +16,13 @@ function greeting(language) {
   // language: 'English' -> 'Hello!'
   // language: 'Spanish' -> 'Hola!'
   // if language is undefined return 'Hello!'
+  if (language === 'German') {
+    return 'Guten Tag!';
+  } else if (language === 'English') {
+    return 'Hello!';
+  } else if (language ==='Spanish') {
+    return 'Hola!';
+  }
 }
 
 function isTenOrFive(num) {
@@ -59,7 +71,7 @@ function getArrayLength(arr) {
 }
 
 function incrementByOne(arr) {
-  // arr is an array of integers  
+  // arr is an array of integers
   // increase each integer by one
   // return the array
 }
