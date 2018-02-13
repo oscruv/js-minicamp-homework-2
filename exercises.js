@@ -3,7 +3,7 @@
 function getBiggest(x, y) {
   // x and y are integers.  Return the larger integer
   // if they are the same return either one
-  if (x => y) {
+  if (x >= y) {
     return x;
   } else {
     return y;
@@ -47,7 +47,7 @@ function isInteger(num) {
   // -10 -> true
   // otherwise return false
   // hint: you can solve this using Math.floor
-  return (num === math.floor(num));
+  // return (num === math.floor(num));
 }
 
 function fizzBuzz(num) {
@@ -74,13 +74,7 @@ function isPrime(num) {
   // note: 0 and 1 are NOT considered prime numbers
   if (num < 2) {
     return false;
-  } else {
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> ce60ba156212799cd67d153c71f83d32db4db982
-  }
+  } 
 }
 
 function returnFirst(arr) {
