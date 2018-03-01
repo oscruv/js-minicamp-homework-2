@@ -22,6 +22,8 @@ function greeting(language) {
     return 'Hello!';
   } else if (language ==='Spanish') {
     return 'Hola!';
+  } else {
+    return 'Hello!';
   }
 }
 
@@ -30,6 +32,8 @@ function isTenOrFive(num) {
   // otherwise return false
   if (num === 10 || num === 5) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -37,6 +41,8 @@ function isInRange(num) {
   // return true if num is less than 50 and greater than 20
   if (num > 20 && num < 50) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -48,6 +54,12 @@ function isInteger(num) {
   // otherwise return false
   // hint: you can solve this using Math.floor
   // return (num === math.floor(num));
+  var int = num % 1;
+  if (int === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function fizzBuzz(num) {
@@ -72,38 +84,58 @@ function isPrime(num) {
   // hint: a prime number is only evenly divisible by itself and 1
   // hint2: you can solve this using a for loop
   // note: 0 and 1 are NOT considered prime numbers
-  if (num < 2) {
-    return false;
-  } 
+  for(var i = 0; i <= num; i++){
+    if(num !== 1 && num !== 0){
+      if(num % 2 === 1 || num === 2){
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+
 }
 
 function returnFirst(arr) {
   // return the first item from the array
+  return arr[0];
 }
 
 function returnLast(arr) {
   // return the last item of the array
+  return arr[arr.length-1];
 }
 
 function getArrayLength(arr) {
   // return the length of the array
+  return arr.length;
 }
 
 function incrementByOne(arr) {
   // arr is an array of integers
   // increase each integer by one
   // return the array
+  for (var i = 0; i < arr.length; i++) {
+    arr[i]++;
+  }
+  return arr;
 }
 
 function addItemToArray(arr, item) {
   // add the item to the end of the array
   // return the array
+  arr.push(item);
+  return arr;
 }
 
 function addItemToFront(arr, item) {
   // add the item to the front of the array
   // return the array
   // hint: use the array method .unshift
+  arr.unshift(item);
+  return arr;
 }
 
 function wordsToSentence(words) {
@@ -111,26 +143,47 @@ function wordsToSentence(words) {
   // return a string that is all of the words concatenated together
   // spaces need to be between each word
   // example: ['Hello', 'world!'] -> 'Hello world!'
+  return words.join(' ');
 }
 
 function contains(arr, item) {
   // check to see if item is inside of arr
   // return true if it is, otherwise return false
+  return arr.includes(item);
 }
 
 function addNumbers(numbers) {
   // numbers is an array of integers.
   // add all of the integers and return the value
+  var total = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    total = total + numbers[i];
+  }
+  return total;
 }
 
 function averageTestScore(testScores) {
   // testScores is an array.  Iterate over testScores and compute the average.
   // return the average
+  var total = 0;
+  for (var i = 0; i < testScores.length; i++) {
+    total = total + testScores[i];
+  }
+  var amountOfScores = testScores.length;
+  var avg = total / amountOfScores;
+  return avg; 
 }
 
 function largestNumber(numbers) {
   // numbers is an array of integers
   // return the largest integer
+  var num = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    if(numbers[i] > num) {
+      num = numbers[i];
+    } 
+  }
+  return num;
 }
 
 // Do not modify code below this line.
